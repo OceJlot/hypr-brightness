@@ -18,6 +18,11 @@
 --- 
 ## Installation
 You will need **cmake** and a **gcc** compiler.
+First load the driver and add i2c group to your user:
+```bash
+sudo modprobe i2c-dev
+sudo usermod -aG i2c $USER
+```
 
 ### Standard Installation (/usr/local/bin)
 ```bash
