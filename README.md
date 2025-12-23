@@ -69,3 +69,8 @@ Hypr-brightness trades off some of those checks for raw speed. By using a cachin
 * Compatibility: While built for Hyprland, it should work on other environments if you specify the display name manually with the -m flag.
 * Desync: The cached brightness and physical monitor brightness can technically desync, even though that has never happened to me.
 * Hardware: If this tool fails, your monitor or cable may not support DDC/CI signals. Try ddcutil first; if ddcutil works but this doesn't, please report a bug! If neither works, try a different HDMI/DP cable.
+
+## TODO
+* **Atomic Sync:** Implement a secondary "pending change" cache to prevent race conditions when multiple instances of the program are called simultaneously (e.g., holding down a brightness key).
+* **Hardware Verification:** Implement a post-write check to verify that the physical monitor brightness matches the requested value, ensuring reliability on monitors with finicky DDC implementations.
+* **Robust Capability Detection:** Improve monitor initialization to distinguish between basic DDC support and the specific ability to modify brightness, allowing for more accurate status flags in the cache.
