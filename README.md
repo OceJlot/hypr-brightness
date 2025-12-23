@@ -20,6 +20,7 @@
 You will need **cmake** and **gcc** compiler.
 First load the driver and add i2c group to your user:
 ```bash
+sudo bash -c 'echo "i2c-dev" > /etc/modules-load.d/i2c.conf'
 sudo modprobe i2c-dev
 sudo usermod -aG i2c $USER
 ```

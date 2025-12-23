@@ -52,7 +52,6 @@ void get_active_window_data(char* buffer, size_t size) {
 int get_monitor_name(char* result_buffer, size_t max_len) {
     char response[127] = {0};
     get_active_window_data(response, sizeof(response));
-    response[sizeof(response) - 1] = '\0';
 
     const char* keyword = "\"monitor\": \"";
     char* match_string = strstr(response, keyword);
