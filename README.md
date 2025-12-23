@@ -15,6 +15,15 @@
 * hypr-brightness 100 -a -m DP-4
     * Gradually sets the DP-4 monitor to 100% brightness using default animation settings.
 
+
+<p align="center">
+  <details>
+    <summary><b>Click to view Demo</b></summary>
+    <br>
+    <video src="https://github.com/user-attachments/assets/d0bfd304-bf6a-47f5-bb86-404799cc5436" width="30%" controls autoplay loop muted></video>
+  </details>
+</p>
+
 --- 
 ## Installation
 You will need **cmake** and **gcc** compiler.
@@ -24,7 +33,6 @@ sudo bash -c 'echo "i2c-dev" > /etc/modules-load.d/i2c.conf'
 sudo modprobe i2c-dev
 sudo usermod -aG i2c $USER
 ```
-
 ### Standard Installation (/usr/local/bin)
 ```bash
 mkdir build && cd build
